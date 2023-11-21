@@ -6,7 +6,7 @@ const calculate = document.querySelector("#calculate")
 
 calculate.addEventListener('click', ()=>{
     const percent = document.querySelector("input[name='tip']:checked")
-    let total = Number(billAmount.value) * Number(numberOfPeople.value)
-    totalPerPerson.innerHTML = total - (total * Number(percent.value) / 100)
-    tipAmount.innerHTML = Number(billAmount.value) - (Number(billAmount.value) * Number(percent.value) / 100)
+    let total = parseFloat(billAmount.value) * parseFloat(numberOfPeople.value)
+    totalPerPerson.innerHTML = total - (total * parseFloat(percent.value) / 100)
+    tipAmount.innerHTML = parseFloat(billAmount.value) - (parseFloat(billAmount.value) * parseFloat(percent.value) / 100)
 })
